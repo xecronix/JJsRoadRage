@@ -158,7 +158,7 @@ src/include/            Project headers
 assets/                 Game art, audio, map, and scores
 deps/include/           Third-party headers
 deps/lib/               Third-party libraries
-RaylibWin32.ppj         Pelles C project file
+JJsRoadRage.ppj         Pelles C project file
 project.bat             Command-line build helper
 raylib.dll              Runtime DLL
 ```
