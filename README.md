@@ -213,10 +213,10 @@ Future cleanup and refactoring may still happen, but the game is already playabl
 
 ## Credits
 
-Built by Ronald Weidner (Xecronix).
-Art: Ronald Weidner
-Music: Pixabay Music - https://pixabay.com/music/
-Code Review + Debug Partner: ChatGPT
+* Built by Ronald Weidner (Xecronix).
+* Art: Ronald Weidner
+* Music: Pixabay Music - https://pixabay.com/music/
+* Code Review + Debug Partner: ChatGPT
 
 Powered by:
 
