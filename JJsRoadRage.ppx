@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1.0">
+	<category name="main.c">
+		<category name="Window">
+			<property name="Left" type="integer">26</property>
+			<property name="Top" type="integer">26</property>
+			<property name="Right" type="integer">1466</property>
+			<property name="Bottom" type="integer">589</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\game.c" />
+	<category name="src\actor.c" />
+	<category name="src\include\actor_manager.h">
+		<category name="Window">
+			<property name="Left" type="integer">52</property>
+			<property name="Top" type="integer">52</property>
+			<property name="Right" type="integer">1492</property>
+			<property name="Bottom" type="integer">615</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\actor_manager.c">
+		<category name="Window">
+			<property name="Left" type="integer">78</property>
+			<property name="Top" type="integer">78</property>
+			<property name="Right" type="integer">1518</property>
+			<property name="Bottom" type="integer">641</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\include\gfx_manager.h" />
+	<category name="src\gfx_manager.c" />
+	<category name="src\include\actor_templates.h" />
+	<category name="src\actor_templates.c" />
+	<category name="src\include\xx2d.h" />
+	<category name="src\include\actor.h">
+		<category name="Window">
+			<property name="Left" type="integer">104</property>
+			<property name="Top" type="integer">104</property>
+			<property name="Right" type="integer">1544</property>
+			<property name="Bottom" type="integer">667</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="deps\include\raylib.h" />
+	<category name="src\include\conf.h" />
+	<category name="src\include\xx_types.h">
+		<category name="Window">
+			<property name="Left" type="integer">4294967288</property>
+			<property name="Top" type="integer">4294967265</property>
+			<property name="Right" type="integer">1523</property>
+			<property name="Bottom" type="integer">759</property>
+			<property name="Maximized" type="integer">1</property>
+			<property name="Active" type="integer">1</property>
+		</category>
+	</category>
+	<category name="src\include\xx_input.h" />
+	<category name="src\xx_input.c" />
+	<category name="src\include\xx_conf.h" />
+	<category name="src\game_sim.c">
+		<category name="Window">
+			<property name="Left" type="integer">156</property>
+			<property name="Top" type="integer">156</property>
+			<property name="Right" type="integer">1596</property>
+			<property name="Bottom" type="integer">719</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\include\start_sim.h">
+		<category name="Window">
+			<property name="Left" type="integer">182</property>
+			<property name="Top" type="integer">182</property>
+			<property name="Right" type="integer">1622</property>
+			<property name="Bottom" type="integer">745</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\start_sim.c">
+		<category name="Window">
+			<property name="Left" type="integer">208</property>
+			<property name="Top" type="integer">208</property>
+			<property name="Right" type="integer">1648</property>
+			<property name="Bottom" type="integer">771</property>
+			<property name="Maximized" type="integer">0</property>
+			<property name="Active" type="integer">0</property>
+		</category>
+	</category>
+	<category name="src\settings_sim.h" />
+	<category name="src\settings_sim.c" />
+	<category name="src\pause_sim.c" />
+	<category name="src\include\game_sim.h" />
+	<category name="src\include\sfx_manager.h" />
+	<category name="src\sfx_manager.c" />
+	<category name="src\high_score_sim.c" />
+</settings>

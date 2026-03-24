@@ -1,0 +1,43 @@
+- game loop
+- These are rough ideas.  As I start implementing there might be drift.  (usually, there's drift.  LOL)
+DoCollide(); // checks for collisions between actors.  Reports to actors when collisions happen.
+DoInput();   // Populates a struct of user inputs.  Mainly the keyboard today.  Mouse and Joy one day.
+DoRender();
+
+- End loop
+
+int DoInput()
+{
+	- fill the input struct.
+	- pass the struct to the each actors "action(InputStruct in)" method.  
+	- pass the struct to the WorldAction function.  (moves camera or scrolls the Background)
+	- pass the struct to UIAction function.  This will create an image with UI like features.  Mainly buttons
+			and Labels. This will likely respond to mouse clicks.  Might spawn some invisible actors to use as "action listeners". we'll see.
+	- All of the "Action" functions/methods above report to the rendering state manager.  For now, the "reporting" is simple:
+			there is a global array of actor image gfx structs.  it has the VRAM id of the actor texture, and the x,y world cooridinate. 
+			For the sake of simplicity, this array might be large. 1024 actors is the max actors a game/level can have.
+	- Depending on what the world code is doing, maybe it's moving the camera (bound world). Maybe it's picking tiles (forever scroller)
+		either way, it's manipulating something based on input.
+		
+}
+
+DoRender()
+{
+	- there are several array structs.  I think of them like layers.  They're all basically the same thing.  
+		draw this image by id at (x, y)
+	
+	- the layers (struct arrays) are named something like worldGfx, actorGfx, uiGfx.  In that order.
+		after drawing an item in each index of the array, it's set to something that means "stop here" for the next loop.  Think null terminated string mentality.
+}
+
+DoCollide()
+{
+	- Every actor has a method called "Collision(Actor *otherActor)"  
+		We can think of this method as a listener for collisions.  What needs to happen next depends on the actors involved.  
+		For example if a player bumps into a house, maybe the player's x,y is adjusted (repelled).  But if a player bumps 
+		into an arrow, that might be a total different action.  This is why actors have an attack value and a defense value.
+		Whatever.  It's not at this level where what to do is decided.  That happens at the actor level in the Collision method.
+		This thing just fires the event. And all Actors are listening.  I don't know how many collision detections happen but,
+		it can be significantly reduced by locking collisions to only actors in the viewport.  That better than testing collision 
+		of every actor against every other actor.  (assuming 1024 actors)
+}

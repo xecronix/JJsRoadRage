@@ -1,0 +1,46 @@
+## FBI Pursuit milestones (high-level)
+
+1. **Boot to frame**
+COMPLETE - Done when: game launches, runs a stable loop, shows FPS/debug text, and quits cleanly.
+
+2. **Level 1 map layout (visual only)**
+COMPLETE - Done when: you have a Level 1 tile map that describes what tile goes where (no properties, no metadata).
+
+3. **Render Level 1 using the forever-scroller world**
+COMPLETE - Done when: the map loads and displays, and the world scrolls indefinitely (or as designed) without gameplay.
+
+4. **Player actor spawns and moves**
+COMPLETE - Done when: player appears, responds to input, and is bound to the screen (for now).
+
+5. **World actors placed on the map**
+    - Shoot spawns HeroBullet
+    - Spawn NPC cars (enemies/civilians/roadside)
+    - Maintain min NPC counts
+    - Respawn logic (shot or off-screen bottom)
+
+6. **Player is constrained by the world (not just the screen)**
+- Done when: player can no longer drive through off-road/obstacles; they are repelled/blocked by world actors.
+
+7. **Single enemy on screen with basic AI**
+- Done when: one enemy spawns and exhibits one clear behavior (follow lane, chase, drift, etc.).
+
+8. **Basic interaction rules**
+- Done when: player vs enemy and player vs world have consistent outcomes (damage/repel/ignore) and you can "lose" (reset/death/state change).
+
+9. **Second enemy type OR enemy variety**
+- Done when: either a second enemy behaves differently, or the first enemy has meaningful variation (speed, aggressiveness, lane changes).
+
+10. **Core game loop: score + fail state**
+- Done when: you can score points and the game has a clear fail condition (and a reset/restart flow).
+
+11. **Level 1 complete as a playable slice**
+- Done when: a player can play for 2-5 minutes and it feels like a game (even if its ugly).
+
+12. **Level 1 gets variety**
+- Done when: you can place non-tile world objects (road edges, barriers, houses, brambles, etc.) using the randomly.
+
+13. **Polish pass**
+- Done when: sound, UI basics, and small juice (hit feedback, shake, flashes, etc.) are in.
+
+13. **Packaging**
+- Done when: a "ship folder" or installer works on a clean machine (relative assets/deps work as intended).

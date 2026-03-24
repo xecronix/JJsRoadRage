@@ -1,0 +1,129 @@
+deps/manifest.txt
+Purpose: Pin and document all build/runtime dependencies that are vendored in this repo.
+Policy: If the app needs it to build or run, it must live under ./deps (not installed "somewhere else").
+
+Philosophy:
+No solution is perfect. Since that's true, the question becomes:
+What problems are we more comfortable having and/or handling when they arrive?
+
+Shift:
+"They should do something about that problem" -> "I should do something about the problems I actually have."
+
+--------------------------------------------------------------------------------
+SECTION A: DEPENDENCY RULES (non-negotiable)
+--------------------------------------------------------------------------------
+1) Local truth:
+   - The repo must build and run using dependencies under ./deps.
+   - Do not rely on global machine installs, PATH, or system-wide libraries.
+
+2) Pinning:
+   - Every dependency must be pinned to a specific version (or commit hash).
+   - No floating versions.
+
+3) Provenance:
+   - Record source URL and acquisition date for every dependency.
+
+4) Runtime deployment:
+   - If a dependency is required at runtime, it must ship with the product (or be explicitly documented).
+
+5) Changes are intentional:
+   - Updates require a changelog entry and a note on testing impact.
+
+--------------------------------------------------------------------------------
+SECTION B: DEPENDENCY INVENTORY
+--------------------------------------------------------------------------------
+Format:
+- Name:
+- Category: (build-time / runtime / both)
+- Location in repo:
+- Version:
+- Source:
+- Date acquired:
+- License:
+- Purpose:
+- Notes:
+- Local modifications:
+- Update policy:
+- Testing notes:
+
+[DEP-001]
+Name: raylib (windows build)
+Category: both
+Location in repo:
+  - deps/include/ (raylib.h, raymath.h, rlgl.h)
+  - deps/lib/     (raylib.dll, raylib.lib, raylibdll.lib)
+  - (note) a copy of raylib.dll also exists at repo root for convenience when running the exe from there
+Version:
+  - TODO: record version from deps/include/raylib.h (RAYLIB_VERSION_* macros)
+Source:
+  - TODO: where you obtained/built this raylib.dll and .lib files (URL or internal path)
+Date acquired:
+  - TODO
+License:
+  - TODO (raylib is typically zlib/libpng; record the exact license used by your build)
+Purpose:
+  - Graphics/audio/input/windowing for this project (raylib)
+Notes:
+  - This repo vendors raylib to prevent build/run drift across machines.
+Local modifications:
+  - TODO: none (or list changes if you patched headers/libs)
+Update policy:
+  - Only if needed (new feature or bug fix required by this project)
+Testing notes:
+  - Smoke test: builds clean; window opens; draws sprite; plays sound; exits clean.
+  - Verify runtime: exe can run from repo root and finds raylib.dll.
+
+[DEP-002]
+Name: PellesC toolchain (reference)
+Category: build-time
+Location in repo: (not vendored here; referenced only)
+Version:
+  - TODO: exact PellesC version used (and whether installer triggers warnings on newer versions)
+Source:
+  - TODO: where you obtained the installer (link or archived copy location)
+Date acquired:
+  - TODO
+License:
+  - TODO
+Purpose:
+  - C compiler + IDE used to build this project
+Notes:
+  - This is recorded so the build can be reproduced later.
+Local modifications:
+  - none
+Update policy:
+  - Frozen unless forced (keep a known-good toolchain)
+Testing notes:
+  - Build from RaylibWin32.ppj succeeds on a clean machine with deps present.
+
+--------------------------------------------------------------------------------
+SECTION C: DEPENDENCY CHANGE LOG
+--------------------------------------------------------------------------------
+Format:
+- Date:
+- DEP-###:
+- Change: (added/updated/removed)
+- From -> To:
+- Why:
+- Risk:
+- Tests performed:
+- Notes:
+
+[CHANGELOG]
+- Date: YYYY-MM-DD
+  DEP-###:
+  Change:
+  From -> To:
+  Why:
+  Risk:
+  Tests performed:
+  Notes:
+
+--------------------------------------------------------------------------------
+SECTION D: BUILD "DEV KIT" SNAPSHOT (recommended)
+--------------------------------------------------------------------------------
+- Primary OS:
+- Primary compiler/IDE:
+- Compiler version:
+- raylib version (from raylib.h):
+- Notes:

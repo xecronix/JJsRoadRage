@@ -1,0 +1,77 @@
+[editor]
+line_wrapping=false
+line_break_column=72
+auto_continue_multiline=true
+
+[file_prefs]
+final_new_line=true
+ensure_convert_new_lines=false
+strip_trailing_spaces=false
+replace_tabs=false
+
+[indentation]
+indent_width=4
+indent_type=0
+indent_hard_tab_width=8
+detect_indent=false
+detect_indent_width=false
+indent_mode=2
+
+[project]
+name=JJsRoadRage
+base_path=C:\\dev\\JJsRoadRage
+description=
+file_patterns=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=0
+FILE_NAME_0=0;C;0;EUTF-8;0;1;0;C%3A%5Cdev%5CJJsRoadRage%5Csrc%5Cdashboard_sim.c;0;4
+
+[build-menu]
+NF_00_LB=Build Debug
+NF_00_CM=%p\\project.bat build_debug
+NF_00_WD=
+NF_01_LB=
+NF_01_CM=
+NF_01_WD=
+NF_02_LB=Build Release
+NF_02_CM=%p\\project.bat build_release
+NF_02_WD=
+NF_03_LB=cTag Regen (Update Symbols)
+NF_03_CM=%p\\tags.bat
+NF_03_WD=
+EX_00_LB=Run
+EX_00_CM=%p\\project.bat run
+EX_00_WD=
+error_regex=^(.+)\\(([0-9]+)\\):
+CFT_02_LB=Lint
+CFT_02_CM="C:\\Program Files\\Cppcheck\\cppcheck.exe"  --language=c --enable=warning,style --template=gcc "%f"
+CFT_02_WD=
+filetypes=C;None;
+EX_01_LB=Crude
+EX_01_CM=%p\\project.bat crude
+EX_01_WD=
+NoneFT_02_LB=CppCheck Lint
+NoneFT_02_CM=CFT_02_CM="C:\\\\Program Files\\\\Cppcheck\\\\cppcheck.exe"  --language=c --enable=warning,style --template=gcc "%f"
+NoneFT_02_WD=
+CFT_00_LB=Diff
+CFT_00_CM=%p\\project.bat diff
+CFT_00_WD=
+CFT_01_LB=Clean
+CFT_01_CM=%p\\project.bat clean
+CFT_01_WD=
+Cerror_regex=^(.+)\\(([0-9]+)\\):
+
+[prjorg]
+expanded_paths=C:\\dev\\JJsRoadRage\\deps\\include;C:\\dev\\JJsRoadRage\\src\\include;
+source_patterns=*.c;*.C;*.cpp;*.cxx;*.c++;*.cc;*.m;
+header_patterns=*.h;*.H;*.hpp;*.hxx;*.h++;*.hh;
+ignored_dirs_patterns=.*;CVS;
+ignored_file_patterns=*.o;*.obj;*.a;*.lib;*.so;*.dll;*.lo;*.la;*.class;*.jar;*.pyc;*.mo;*.gmo;
+generate_tag_prefs=0
+show_empty_dirs=true
+external_dirs=
